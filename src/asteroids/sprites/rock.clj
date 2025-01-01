@@ -1,7 +1,7 @@
 (ns asteroids.sprites.rock
   (:require [quil.core :as q]
             [quip.util :as u]
-            [quip.sprite :as qpsprite]
+            [quip.sprite :as sprite]
             [asteroids.common :as c]))
 
 ;; Move to utils namespace at some point.
@@ -43,9 +43,9 @@
   (q/triangle 50 50 450 200 100 390))
 
 (defn rock
-  [pos]
-  (qpsprite/sprite
+  []
+  (sprite/sprite
    :rocks
-   pos
+   [100 100]
    :update-fn identity
    :draw-fn test-rock))

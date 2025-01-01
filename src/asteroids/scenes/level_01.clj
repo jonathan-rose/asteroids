@@ -3,12 +3,14 @@
             [quip.util :as u]
             [quil.core :as q]
             [asteroids.common :as c]
-            [asteroids.sprites.rock :as rock]))
+            [asteroids.sprites.rock :as rock]
+            [asteroids.sprites.player :as player]))
 
 (defn sprites
   "The initial list of sprites for this scene"
   []
-  [(rock/rock [50 50])])
+  [(player/player)
+   (rock/rock)])
 
 (defn draw-level-01!
   "Called each frame, draws the current scene to the screen"
